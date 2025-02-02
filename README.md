@@ -1,2 +1,2 @@
-# dt.github.io
+# DT's devlog
 DT's devlog
