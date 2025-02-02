@@ -22,9 +22,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "최용범"
 description              : "개발 & 자본시장 blog"
-url                      : "https://dt.github.io"
+url                      : "https://drache0311.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "drache0311/dt.github.io"
+repository               : "drache0311/drache0311.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
