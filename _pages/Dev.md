@@ -2,7 +2,7 @@
 title: "Dev"
 layout: posts
 permalink: /dev/
-author_profile: true
+author_profile: false
 classes: wide
 category: dev
 ---
