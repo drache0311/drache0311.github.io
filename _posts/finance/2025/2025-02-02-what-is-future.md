@@ -1,8 +1,7 @@
 ---
 title: "What is Future?"
 search: false
-tags: 
-  - future
+tags: [future]
 last_modified_at: 2025-02-02T23:30:00
 ---
 

@@ -36,9 +36,13 @@ layout: default
           </h1>
           {%- endif %}
           {% include page__meta.html %}
+          {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+          {% endif %}
+          {% include page__taxonomy.html %}
+          {% include page__date.html %}
         </header>
       {% endunless %}
-
       <section class="page__content" itemprop="text">
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
@@ -51,20 +55,8 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
-
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-        {% include page__date.html %}
-      </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
-
       {% include post_pagination.html %}
     </div>
-
     {% if site.comments.provider and page.comments %}
       {% if jekyll.environment == 'production' %}
         {% include comments.html %}
@@ -76,12 +68,4 @@ layout: default
       {% endif %}
     {% endif %}
   </article>
-
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    {% include page__related.html posts=site.related_posts %}
-  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
-  {% elsif page.id and page.related %}
-    {% include page__related.html posts=site.posts %}
-  {% endif %}
 </div>

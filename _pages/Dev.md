@@ -1,8 +1,7 @@
 ---
 title: "Dev"
-layout: posts
+layout: default
 permalink: /dev/
-author_profile: false
 classes: wide
 category: dev
 ---
@@ -12,7 +11,10 @@ category: dev
         {% if post.categories contains page.category %}
             <li>
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                <div>
+                    <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                    {% include page__meta.html %}
+                </div>
             </li>
         {% endif %}
     {% endfor %}
