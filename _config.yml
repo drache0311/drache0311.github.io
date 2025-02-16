@@ -279,11 +279,21 @@ compress_html:
   ignore:
     envs: development
 
-
 # Defaults
 defaults:
   - scope:
-      path: ""
+      path: "_posts/dev"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      categories: [dev]
+  - scope:
+      path: "_posts/finance"
       type: posts
     values:
       layout: single
@@ -292,3 +302,4 @@ defaults:
       comments:  true
       share: true
       related: true
+      categories: [finance]

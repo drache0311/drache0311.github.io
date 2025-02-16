@@ -2,6 +2,9 @@
   "name": "minimal-mistakes",
   "private": true,
   "version": "4.26.2",
+  "scripts": {
+    "dev" : "bundle exec jekyll serve"
+  },
   "description": "Minimal Mistakes 2 column Jekyll theme.",
   "repository": {
     "type": "git",
