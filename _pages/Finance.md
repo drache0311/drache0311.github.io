@@ -13,10 +13,10 @@ category: finance
             {% if post.categories contains page.category %}
                 <article class="article__grid">
                     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                    <div>
-                        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                    <p>
+                        <time>{{ post.date | date: "%d.%m.%Y" }}</time>
                         {% include page__meta.html %}
-                    </div>
+                    </p>
                 </article>
             {% endif %}
         {% endfor %}
