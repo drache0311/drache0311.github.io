@@ -2,7 +2,7 @@
    FOOTER
    ========================================================================== */
 
-.page__footer {
+footer {
   @include clearfix;
   float: inline-start;
   margin-inline: 0;
@@ -15,7 +15,7 @@
   animation-delay: 0.45s;
   background-color: $footer-background-color;
 
-  footer {
+  .page__footer {
     @include clearfix;
     margin-inline: auto;
     margin-top: 2em;

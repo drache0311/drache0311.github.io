@@ -1,11 +1,51 @@
 /* ==========================================================================
+   BASE LAYOUT
+   ========================================================================== */
+
+.body__layout {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1024px;
+  min-width: 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   INDEX
+   ========================================================================== */
+
+.page__index {
+  display: grid;
+  max-width: 50rem;
+  gap: 2rem;
+  place-items: center flex-start;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+
+  .profile {
+    border-radius: 50%;
+    width: 304px;
+    height: 304px;
+  }
+
+  .bio-describe {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+
+    h1 {
+      font-size: 1.363em;
+    }
+  }
+}
+
+/* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
 
 #main {
   @include clearfix;
   margin-inline: auto;
-  padding-inline: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -31,6 +71,8 @@ body {
 .initial-content,
 .search-content {
   flex: 1 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page {
