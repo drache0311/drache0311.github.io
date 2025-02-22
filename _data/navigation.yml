@@ -1,6 +1,6 @@
 # main links
 main:
   - title: "Dev"
-    url: https://drache0311.github.io/dev/
+    url: /dev/
   - title: "Finance"
-    url: https://drache0311.github.io/finance/
+    url: /finance/
