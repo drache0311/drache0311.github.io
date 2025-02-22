@@ -40,6 +40,30 @@
 }
 
 /* ==========================================================================
+   GRID POSTS
+   ========================================================================== */
+
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+
+  .section__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+    justify-items: stretch;
+
+    .article__grid {
+      max-width: 320px;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      padding: 8px;
+    }
+  }
+}
+
+/* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
 

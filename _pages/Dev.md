@@ -1,21 +1,24 @@
 ---
 title: "Dev"
-layout: default
+layout: posts-grid
 permalink: /dev/
 classes: wide
 category: dev
 ---
 
-<ul>
-    {% for post in site.posts %}
-        {% if post.categories contains page.category %}
-            <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <div>
-                    <p>{{ post.date | date: "%B %d, %Y" }}</p>
-                    {% include page__meta.html %}
-                </div>
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
+<section>
+    <h1>Dev</h1>
+    <section class="section__grid">
+        {% for post in site.posts %}
+            {% if post.categories contains page.category %}
+                <article class="article__grid">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    <div>
+                        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                        {% include page__meta.html %}
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </section>
+</section>
