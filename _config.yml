@@ -288,3 +288,14 @@ defaults:
       share: true
       related: true
       categories: [finance]
+  - scope:
+      path: "_posts/retro"
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments:  true
+      share: true
+      related: true
+      categories: [retro]
